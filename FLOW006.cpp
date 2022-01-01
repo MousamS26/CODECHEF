@@ -9,17 +9,18 @@ int main() {
 	freopen("out.txt", "w", stdout);
 #endif
 
-	int t;
+	int t, n;
 	cin >> t;
-	int ans = 0;
 	while (t--)
 	{
-		string n;
-		for (int i = 0; i < n.length(); i++)
+		cin >> n;
+		int r = 0;
+		while (n > 0)
 		{
-			ans = n[0] + n.back();
+			r += n % 10;
+			n /= 10;
 		}
-		cout << ans << endl;
+		cout << r << endl;
 	}
 
 }
